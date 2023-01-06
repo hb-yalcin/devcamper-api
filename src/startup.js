@@ -2,17 +2,19 @@
 const express = require('express');
 
 // Custom modules
+const bootcampsRouter = require('./routes/bootcamps-routes');
 
 const app = express();
 
+// Mount routes
+app.use(bootcampsRouter);
+
+// Set port
 const PORT = process.env.PORT || 5011;
 
 const startApp = () => {
   const server = app.listen(PORT, () => {
-    console.log(
-      `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow
-        .bold
-    );
+    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold);
   });
 
   // Handle unhandled promise rejections
