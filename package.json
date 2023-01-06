@@ -1,0 +1,22 @@
+{
+  "name": "devcamper-api",
+  "version": "1.0.0",
+  "description": "Devcamper Backend API",
+  "author": "Hasan Baris Yalcin",
+  "license": "ISC",
+  "keywords": [],
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node ./src/server",
+    "start:dev": "nodemon ./src/server --watch ./src"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
